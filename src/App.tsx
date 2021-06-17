@@ -38,7 +38,7 @@ function App() {
   const [goles, setGoles] = useState<Gol[]>([]);
   const [editedIndex, setEditedIndex] = useState(-1);
 
-  const audio = new Audio("/cr_suuu.mp3");
+  const audio = new Audio("./cr_suuu.mp3");
 
   const handleAddGol = () => {
     const isValidForm = Object.keys(gol).some((t) => t !== "");
