@@ -47,7 +47,7 @@ function App() {
 
       if (!findSameNumber) {
         setGoles((state) => [...state, gol]);
-        setGol({ ...gol, ...defaultData });
+        setGol({ ...defaultData });
         audio.play();
       }
     }
