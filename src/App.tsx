@@ -53,7 +53,7 @@ function App() {
     }
   };
 
-  const handleEdit = (number: number) => {
+  const handleEdit = (number: number | string) => {
     setIsEdit(true);
     const findGol = goles.findIndex((g) => g.number === number);
     setEditedIndex(findGol);
@@ -61,7 +61,7 @@ function App() {
   };
 
   const handleEditGol = () => {
-    const isValidForm = Object.keys(gol).some((t) => t !== "" && t !== 0);
+    const isValidForm = Object.keys(gol).some((t) => t !== "");
     if (isValidForm) {
       setGoles(goles.map((g, i) => (i === editedIndex ? gol : g)));
       setEditedIndex(-1);
